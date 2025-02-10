@@ -2,32 +2,17 @@ import { TimelineItem } from "@/components/timeline-item";
 
 const experiences = [
   {
-    date: "2022 - Present",
-    title: "Senior Full Stack Developer",
-    company: "Tech Innovators Inc.",
+    date: "2024 - Present",
+    title: "SDE Intern",
+    company: "Ageion Dynamics.",
     description:
-      "Leading development of web applications using React, Node.js, and AWS. Mentoring junior developers and implementing best practices.",
+      "Developed a web application for the company's internal use using Nextjs.",
   },
   {
-    date: "2020 - 2022",
-    title: "Full Stack Developer",
-    company: "Digital Solutions Ltd.",
-    description:
-      "Developed and maintained multiple client projects using MERN stack. Implemented CI/CD pipelines and improved application performance.",
-  },
-  {
-    date: "2018 - 2020",
-    title: "Frontend Developer",
-    company: "WebCraft Studios",
-    description:
-      "Created responsive and interactive user interfaces using React and Vue.js. Collaborated with designers to implement pixel-perfect designs.",
-  },
-  {
-    date: "2017 - 2018",
-    title: "Junior Web Developer",
-    company: "StartUp Nexus",
-    description:
-      "Assisted in the development of web applications using JavaScript and PHP. Gained experience in agile methodologies and version control.",
+    date: "2024 - present",
+    title: "Software Engineer",
+    company: "facttwin.",
+    description: "Build a Blog Appliction using Angular and NestJs.",
   },
 ];
 
