@@ -1,4 +1,4 @@
-import { SkillSection } from "@/components/skill-section"
+import { SkillSection } from "@/components/skill-section";
 
 const skillCategories = [
   {
@@ -18,7 +18,16 @@ const skillCategories = [
   },
   {
     title: "Backend",
-    skills: ["Node.js", "Express", "Python", "Django", "Ruby on Rails", "PHP", "GraphQL", "RESTful APIs"],
+    skills: [
+      "Node.js",
+      "Express",
+      "Python",
+      "Django",
+      "Ruby on Rails",
+      "PHP",
+      "GraphQL",
+      "RESTful APIs",
+    ],
   },
   {
     title: "Databases",
@@ -26,7 +35,15 @@ const skillCategories = [
   },
   {
     title: "DevOps & Cloud",
-    skills: ["Docker", "Kubernetes", "AWS", "Google Cloud", "CI/CD", "Jenkins", "Terraform"],
+    skills: [
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "Google Cloud",
+      "CI/CD",
+      "Jenkins",
+      "Terraform",
+    ],
   },
   {
     title: "Mobile",
@@ -34,13 +51,23 @@ const skillCategories = [
   },
   {
     title: "Tools & Methodologies",
-    skills: ["Git", "Agile", "Scrum", "Jira", "Figma", "Adobe XD", "Test-Driven Development"],
+    skills: [
+      "Git",
+      "Agile",
+      "Scrum",
+      "Jira",
+      "Figma",
+      "Adobe XD",
+      "Test-Driven Development",
+    ],
   },
-]
+];
 
 export default function SkillsPage() {
   return (
-    <div className="container py-12">
+    <div className="container py-12 px-4 md:px-6">
+      {" "}
+      {/* Added padding */}
       <h1 className="text-4xl font-bold mb-12">Skills</h1>
       <div className="grid gap-8 md:grid-cols-2">
         {skillCategories.map((category, index) => (
@@ -48,6 +75,5 @@ export default function SkillsPage() {
         ))}
       </div>
     </div>
-  )
+  );
 }
-

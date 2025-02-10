@@ -1,4 +1,4 @@
-import { TimelineItem } from "@/components/timeline-item"
+import { TimelineItem } from "@/components/timeline-item";
 
 const experiences = [
   {
@@ -29,11 +29,11 @@ const experiences = [
     description:
       "Assisted in the development of web applications using JavaScript and PHP. Gained experience in agile methodologies and version control.",
   },
-]
+];
 
 export default function ExperiencePage() {
   return (
-    <div className="container py-12">
+    <div className="container py-12 px-4 md:px-6">
       <h1 className="text-4xl font-bold mb-12">Experience</h1>
       <div className="space-y-8">
         {experiences.map((experience, index) => (
@@ -41,6 +41,5 @@ export default function ExperiencePage() {
         ))}
       </div>
     </div>
-  )
+  );
 }
-

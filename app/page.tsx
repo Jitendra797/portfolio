@@ -1,18 +1,20 @@
-import { ProjectCard } from "@/components/project-card"
-import { SkillSection } from "@/components/skill-section"
-import { StoryCard } from "@/components/story-card"
+import { ProjectCard } from "@/components/project-card";
+import { SkillSection } from "@/components/skill-section";
+import { StoryCard } from "@/components/story-card";
 
 export default function Page() {
   return (
-    <div className="container py-12 space-y-20">
+    <div className="container py-12 px-4 md:px-6 space-y-20">
+      {" "}
+      {/* Added padding */}
       {/* Hero Section */}
       <section className="text-center space-y-6">
-        <h1 className="text-5xl font-bold">Namaste, I'm Jitendra</h1>
+        <h1 className="text-5xl font-bold">Namasthe, I'm Jitendra</h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          Full Stack Developer specializing in modern web technologies and creating innovative solutions
+          Software Developer specializing in making scalable web apps and mobile
+          apps and creating innovative solutions
         </p>
       </section>
-
       {/* Featured Projects */}
       <section>
         <h2 className="text-3xl font-bold mb-8">Featured Projects</h2>
@@ -40,7 +42,6 @@ export default function Page() {
           />
         </div>
       </section>
-
       {/* Latest Stories */}
       <section>
         <h2 className="text-3xl font-bold mb-8">Latest Stories</h2>
@@ -68,19 +69,6 @@ export default function Page() {
           />
         </div>
       </section>
-
-      {/* Skills Overview */}
-      <section>
-        <h2 className="text-3xl font-bold mb-8">Skills Overview</h2>
-        <div className="grid gap-8 md:grid-cols-2">
-          <SkillSection
-            title="Frontend"
-            skills={["React", "Next.js", "TypeScript", "Tailwind CSS", "Redux", "GraphQL"]}
-          />
-          <SkillSection title="Backend" skills={["Node.js", "Express", "Python", "Django", "PostgreSQL", "MongoDB"]} />
-        </div>
-      </section>
     </div>
-  )
+  );
 }
-

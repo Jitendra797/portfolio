@@ -1,13 +1,14 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { Menu } from "lucide-react"
+import * as React from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Menu } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { cn } from "@/lib/utils"
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { cn } from "@/lib/utils";
+import { ModeToggle } from "@/components/mode-toggle";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -17,23 +18,25 @@ const navigation = [
   { name: "Experience", href: "/experience" },
   { name: "Skills", href: "/skills" },
   { name: "Certificates", href: "/certificates" },
-]
+];
 
 export function SiteHeader() {
-  const pathname = usePathname()
-  const [isOpen, setIsOpen] = React.useState(false)
+  const pathname = usePathname();
+  const [isOpen, setIsOpen] = React.useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
-        <div className="hidden md:flex md:gap-6">
+        <div className="hidden md:flex md:gap-6 md:pl-4">
           {navigation.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={cn(
                 "text-sm font-medium transition-colors hover:text-primary",
-                pathname === item.href ? "text-foreground font-bold" : "text-muted-foreground",
+                pathname === item.href
+                  ? "text-foreground font-bold"
+                  : "text-muted-foreground"
               )}
             >
               {item.name}
@@ -56,7 +59,9 @@ export function SiteHeader() {
                   onClick={() => setIsOpen(false)}
                   className={cn(
                     "text-sm font-medium transition-colors hover:text-primary",
-                    pathname === item.href ? "text-foreground font-bold" : "text-muted-foreground",
+                    pathname === item.href
+                      ? "text-foreground font-bold"
+                      : "text-muted-foreground"
                   )}
                 >
                   {item.name}
@@ -65,8 +70,10 @@ export function SiteHeader() {
             </nav>
           </SheetContent>
         </Sheet>
+        <div className="ml-auto">
+          <ModeToggle />
+        </div>
       </div>
     </header>
-  )
+  );
 }
-
