@@ -12,54 +12,23 @@ const skillCategories = [
       "CSS3",
       "Tailwind CSS",
       "Redux",
-      "Vue.js",
-      "Webpack",
     ],
   },
   {
     title: "Backend",
-    skills: [
-      "Node.js",
-      "Express",
-      "Python",
-      "Django",
-      "Ruby on Rails",
-      "PHP",
-      "GraphQL",
-      "RESTful APIs",
-    ],
+    skills: ["Node.js", "Django", "GraphQL", "RESTful APIs"],
   },
   {
     title: "Databases",
-    skills: ["PostgreSQL", "MongoDB", "MySQL", "Redis", "Elasticsearch"],
-  },
-  {
-    title: "DevOps & Cloud",
-    skills: [
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "Google Cloud",
-      "CI/CD",
-      "Jenkins",
-      "Terraform",
-    ],
+    skills: ["PostgreSQL", "MongoDB", "MySQL", "Firebase", "supabase"],
   },
   {
     title: "Mobile",
-    skills: ["React Native", "Flutter", "iOS (Swift)", "Android (Kotlin)"],
+    skills: ["Flutter", "Android (Kotlin)"],
   },
   {
     title: "Tools & Methodologies",
-    skills: [
-      "Git",
-      "Agile",
-      "Scrum",
-      "Jira",
-      "Figma",
-      "Adobe XD",
-      "Test-Driven Development",
-    ],
+    skills: ["Git", "Figma", "VsCode", "Android Studio"],
   },
 ];
 
