@@ -1,13 +1,9 @@
 import { ProjectCard } from "@/components/project-card";
-import { SkillSection } from "@/components/skill-section";
 import { StoryCard } from "@/components/story-card";
 
 export default function Page() {
   return (
-    <div className="container py-12 px-4 md:px-6 space-y-20">
-      {" "}
-      {/* Added padding */}
-      {/* Hero Section */}
+    <div className="container mx-auto py-12 px-4 md:px-6 space-y-20">
       <section className="text-center space-y-6">
         <h1 className="text-5xl font-bold">Namasthe, I'm Jitendra</h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -23,8 +19,8 @@ export default function Page() {
             title="E-commerce Platform"
             description="A full-stack application built with Next.js, TypeScript, and Stripe integration"
             imageUrl="/placeholder.svg?height=200&width=300"
-            githubUrl="https://github.com"
-            liveUrl="https://example.com"
+            githubUrl="https://github.com/Jitendra797/online_shopping"
+            liveUrl="#"
           />
           <ProjectCard
             title="Task Management App"
