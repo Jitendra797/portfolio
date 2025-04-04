@@ -2,14 +2,14 @@ import { TimelineItem } from "@/components/timeline-item";
 
 const experiences = [
   {
-    date: "2024 - Present",
+    date: "2025 - Present",
     title: "SDE Intern",
     company: "Ageion Dynamics.",
     description:
       "Developed a web application for the company's internal use using Nextjs.",
   },
   {
-    date: "2024 - present",
+    date: "2024 - 2025",
     title: "Software Engineer",
     company: "facttwin.",
     description: "Build a Blog Appliction using Angular and NestJs.",
@@ -18,7 +18,7 @@ const experiences = [
 
 export default function ExperiencePage() {
   return (
-    <div className="container py-12 px-4 md:px-6">
+    <div className="container mx-auto py-12 px-4 md:px-6">
       <h1 className="text-4xl font-bold mb-12">Experience</h1>
       <div className="space-y-8">
         {experiences.map((experience, index) => (

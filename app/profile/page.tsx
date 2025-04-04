@@ -5,26 +5,26 @@ import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 
 export default function ProfilePage() {
   return (
-    <div className="container py-12 px-4 md:px-6">
-      {" "}
-      {/* Added padding */}
+    <div className="container mx-auto py-12 px-4 md:px-6">
       <div className="grid gap-8 md:grid-cols-2">
         <Card className="md:col-span-2">
           <CardHeader className="flex flex-col md:flex-row gap-4 md:items-center">
-            <Avatar className="w-23 h-24 md:w-32 md:h-32">
-              <AvatarImage
-                src="/profile_pic.jpg"
-                alt="Profile"
-                className="object-cover"
-              />
-              <AvatarFallback>JM</AvatarFallback>
-            </Avatar>
-            <div>
+            <div className="flex justify-center">
+              <Avatar className="h-32 w-32 md:h-40 md:w-40">
+                <AvatarImage
+                  src="/profile_pic.jpg"
+                  alt="Profile"
+                  className="object-cover"
+                />
+                <AvatarFallback>JM</AvatarFallback>
+              </Avatar>
+            </div>
+            <div className="text-center md:text-left">
               <CardTitle className="text-3xl">Jitendra Maddi</CardTitle>
               <p className="text-xl text-muted-foreground">
                 Software Developer
               </p>
-              <div className="flex gap-2 mt-2">
+              <div className="flex gap-2 mt-2 justify-center md:justify-start">
                 <Badge variant="secondary">Flutter</Badge>
                 <Badge variant="secondary">NextJs</Badge>
                 <Badge variant="secondary">Angular</Badge>

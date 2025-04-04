@@ -53,7 +53,7 @@ const certificates = [
 
 export default function CertificatesPage() {
   return (
-    <div className="container py-12 px-4 md:px-6">
+    <div className="container mx-auto py-12 px-4 md:px-6">
       <h1 className="text-4xl font-bold mb-12">Certificates</h1>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {certificates.map((certificate, index) => (

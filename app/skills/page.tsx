@@ -34,7 +34,7 @@ const skillCategories = [
 
 export default function SkillsPage() {
   return (
-    <div className="container py-12 px-4 md:px-6">
+    <div className="container mx-auto py-12 px-4 md:px-6">
       {" "}
       {/* Added padding */}
       <h1 className="text-4xl font-bold mb-12">Skills</h1>
