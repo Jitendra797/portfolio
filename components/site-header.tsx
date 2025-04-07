@@ -70,9 +70,6 @@ export function SiteHeader() {
             </nav>
           </SheetContent>
         </Sheet>
-        <div className="flex items-center">
-          <ModeToggle />
-        </div>
       </div>
     </header>
   );
