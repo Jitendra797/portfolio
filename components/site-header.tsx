@@ -13,10 +13,8 @@ import { ModeToggle } from "@/components/mode-toggle";
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Profile", href: "/profile" },
-  { name: "Stories", href: "/stories" },
   { name: "Projects", href: "/projects" },
-  { name: "Experience", href: "/experience" },
-  { name: "Skills", href: "/skills" },
+  { name: "Stories", href: "/stories" },
   { name: "Certificates", href: "/certificates" },
 ];
 
