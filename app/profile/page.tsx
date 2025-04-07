@@ -4,6 +4,15 @@ import { Badge } from "@/components/ui/badge";
 import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { TimelineItem } from "@/components/timeline-item";
 import { SkillSection } from "@/components/skill-section";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Button } from "@/components/ui/button";
+import { FileText } from "lucide-react";
 
 const experiences = [
   {
@@ -55,6 +64,34 @@ const skillCategories = [
   {
     title: "Programming Languages",
     skills: ["C", "C++", "Java", "Python", "JavaScript", "Dart"],
+  },
+];
+
+const certificates = [
+  {
+    title: "Introduction To Programming In C",
+    issuer: "NPTEL",
+    date: "2023",
+  },
+  {
+    title: "Design and Analysis of Algorithms",
+    issuer: "NPTEL",
+    date: "2023",
+  },
+  {
+    title: "Data Base Management System",
+    issuer: "NPTEL",
+    date: "2024",
+  },
+  {
+    title: "Google Cloud Computing Foundations",
+    issuer: "NPTEL",
+    date: "2024",
+  },
+  {
+    title: "Angular",
+    issuer: "Sololearn",
+    date: "2024",
   },
 ];
 
@@ -216,6 +253,61 @@ export default function ProfilePage() {
               {skillCategories.map((category, index) => (
                 <SkillSection key={index} {...category} />
               ))}
+            </div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-xl sm:text-2xl">
+              Certifications
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent>
+                {certificates.map((cert, index) => (
+                  <CarouselItem
+                    key={index}
+                    className="md:basis-1/2 lg:basis-1/3"
+                  >
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="text-lg">{cert.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-sm text-muted-foreground">
+                          {cert.issuer} • {cert.date}
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-2" />
+              <CarouselNext className="right-2" />
+            </Carousel>
+            <div className="flex justify-center mt-6">
+              <Button
+                variant="outline"
+                className="flex items-center gap-2"
+                asChild
+              >
+                <a
+                  href="/my_resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <FileText className="h-4 w-4" />
+                  View as PDF
+                </a>
+              </Button>
             </div>
           </CardContent>
         </Card>
