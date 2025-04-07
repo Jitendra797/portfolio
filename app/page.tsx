@@ -1,7 +1,31 @@
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail } from "lucide-react";
+
+const achievements = [
+  {
+    title: "Google Developer Student Clubs",
+    description: "Core Team Member at Raghu Engineering College (2023-2024)",
+  },
+  {
+    title: "HackOverFlow 2.0",
+    description:
+      "Achieved Top 10 at national-level app development hackathon at PHOC College",
+  },
+  {
+    title: "Topper - CSM Branch (B.Tech 1st Year)",
+    description:
+      "Awarded with a certificate and memento for securing the highest CGPA in the CSM branch during B.Tech 1st year.",
+  },
+];
 
 export default function Page() {
   return (
@@ -68,6 +92,41 @@ export default function Page() {
               </CardContent>
             </Card>
           </div>
+        </section>
+
+        {/* Achievements Section */}
+        <section className="space-y-6">
+          <h2 className="text-3xl font-bold mb-8 text-center">Achievements</h2>
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent>
+              {achievements.map((achievement, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <Card className="h-full">
+                    <CardHeader>
+                      <CardTitle className="text-lg">
+                        {achievement.title}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm text-muted-foreground">
+                        {achievement.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-center mt-4">
+              <CarouselPrevious className="relative left-0 translate-x-0 hover:bg-primary/20" />
+              <CarouselNext className="relative right-0 translate-x-0 hover:bg-primary/20" />
+            </div>
+          </Carousel>
         </section>
 
         {/* Contact Section */}
