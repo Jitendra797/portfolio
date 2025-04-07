@@ -11,8 +11,7 @@ export default function Page() {
         <section className="text-center space-y-6">
           <h1 className="text-5xl font-bold">Namasthe, I'm Jitendra</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Software Developer specializing in making scalable web apps and
-            mobile apps and creating innovative solutions
+            "I always believe in 'యద్భావం తద్భవతి'."
           </p>
           <div className="flex gap-4 justify-center">
             <Button variant="outline" asChild>
