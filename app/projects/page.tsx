@@ -2,51 +2,49 @@ import { ProjectCard } from "@/components/project-card";
 
 const projects = [
   {
-    title: "E-commerce Platform",
+    title: "Online Shopping",
     description:
-      "A full-stack application built with Next.js, TypeScript, and Stripe integration",
+      "I built an e-commerce app that consists of a splash screen, onboarding screens, login page, home, store, wishlist, and profile sections.",
     imageUrl: "/placeholder.svg?height=200&width=300",
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/Jitendra797/online_shopping",
     liveUrl: "https://example.com",
   },
   {
-    title: "Task Management App",
+    title: "ToDo App Using Flutter",
     description:
-      "React-based productivity tool with real-time updates using Firebase",
+      "Implemented a user-friendly interface with intuitive navigation and clear task organization.",
     imageUrl: "/placeholder.svg?height=200&width=300",
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/Jitendra797/Flutter_ToDoApp",
     liveUrl: "https://example.com",
   },
   {
-    title: "AI-powered Chatbot",
+    title: "Insta Pro",
     description:
-      "Intelligent conversational agent built with Python and TensorFlow",
+      "Using the flutter for frontend and nestjs for backend I created an with instagram features.",
     imageUrl: "/placeholder.svg?height=200&width=300",
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/Jitendra797/Insta-Pro",
     liveUrl: "https://example.com",
   },
   {
-    title: "Portfolio Website",
+    title: "Readme Generator",
     description:
-      "Personal portfolio showcasing projects and skills, built with Next.js and Tailwind CSS",
+      "Giving the github link it will generate the readme file for our project.",
     imageUrl: "/placeholder.svg?height=200&width=300",
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/Jitendra797/ReadmeGenerator",
     liveUrl: "https://example.com",
   },
   {
-    title: "Weather Forecast App",
-    description:
-      "Real-time weather application using OpenWeatherMap API and React",
+    title: "Hashnode",
+    description: "A Social media app to post all our articles.",
     imageUrl: "/placeholder.svg?height=200&width=300",
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/Jitendra797/hashnode",
     liveUrl: "https://example.com",
   },
   {
-    title: "Blog CMS",
-    description:
-      "Content Management System for blogs with markdown support and user authentication",
+    title: "Duolingo Clone",
+    description: "Using Recat Expo I have cloned the Duolingo App.",
     imageUrl: "/placeholder.svg?height=200&width=300",
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/Jitendra797/Duolingo",
     liveUrl: "https://example.com",
   },
 ];
@@ -54,11 +52,18 @@ const projects = [
 export default function ProjectsPage() {
   return (
     <div className="container mx-auto py-12 px-4 md:px-6">
-      <h1 className="text-4xl font-bold mb-12">My Projects</h1>
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
-        ))}
+      <div className="space-y-8">
+        <div className="bg-muted/50 rounded-lg p-4 text-center text-muted-foreground">
+          Images and live demos will be added shortly
+        </div>
+
+        <h1 className="text-4xl font-bold">My Projects</h1>
+
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} {...project} liveUrl={undefined} />
+          ))}
+        </div>
       </div>
     </div>
   );
